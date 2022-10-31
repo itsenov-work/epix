@@ -1,0 +1,3 @@
+name: "metal_poles"
+num_classes: 4
+image_dims: [256, 256, 3]

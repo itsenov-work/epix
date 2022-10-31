@@ -1,0 +1,4 @@
+resources/google/credentials
+venv
+logs
+.idea
