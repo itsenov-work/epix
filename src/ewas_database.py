@@ -8,7 +8,7 @@ import json
 from strenum import StrEnum
 import urllib.parse
 
-GLOBAL_URL = "https://ngdc.cncb.ac.cn/ewas/"
+from logging import LoggerMixin
 
 
 class BrowseEndpoints(StrEnum):
@@ -69,39 +69,66 @@ class BrowseFilters(StrEnum):
             return "study_id"
 
 
-def get_all_filters(filter_type):
-    endpoint = BrowseFilters.get_endpoint(filter_type)
-    timestamp = int(datetime.datetime.now().timestamp() * 1000)
-    all_filters = {}
-    url = f"https://ngdc.cncb.ac.cn/ewas/{endpoint}?term=_&_={timestamp}"
-    r = requests.get(url)
-    for result in r.json()['results']:
-        if result['id'] in all_filters:
-            continue
-        all_filters[result['id']] = result['text']
-    save_json("ewas_database", f"all_{filter_type}", all_filters)
-    return all_filters
+class EWASDatabaseBrowser(LoggerMixin):
+    URL = "https://ngdc.cncb.ac.cn/ewas/"
 
+    @staticmethod
+    def _get_response(url):
+        r = requests.get(url)
+        r.raise_for_status()
+        return r.json()
 
-def _get_browse_url(keyword, filters):
-    default_filters = BrowseFilters.get_defaults()
-    default_filters.update(filters)
-    if BrowseFilters.TRAIT not in filters:
-        default_filters.pop(BrowseFilters.TRAIT2)
-    url = GLOBAL_URL + f"browse/{keyword}?"
-    url += "&".join([f"{key}={value}" for key, value in default_filters.items()])
-    url = url.replace("!traitList", "traitList")
-    return url
+    def get_all_filters(self, filter_type: BrowseFilters):
 
+        self.log.i(f"Getting all filters of type {filter_type.name}")
 
-def browse(endpoint, filters):
-    url_filters = {}
-    for key, value in filters.items():
-        url_filters[key] = urllib.parse.quote(str(value))
-    url = _get_browse_url(endpoint, url_filters)
-    print(url)
-    r = requests.get(url)
-    return r.json()
+        endpoint = BrowseFilters.get_endpoint(filter_type)
+        timestamp = int(datetime.datetime.now().timestamp() * 1000)
+        all_filters = {}
+        url = f"https://ngdc.cncb.ac.cn/ewas/{endpoint}?term=_&_={timestamp}"
+        response = self._get_response(url)
+        try:
+            for result in response['results']:
+                if result['id'] in all_filters:
+                    continue
+                all_filters[result['id']] = result['text']
+        except IndexError as e:
+            self.log.e(f"Response from url {url} failed or is in unexpected format")
+            self.log.e(f"Response: {response}")
+            self.log.error("EWAS database endpoint failed.")
+        save_json("ewas_database", f"all_{filter_type}", all_filters)
+        return all_filters
+
+    def _get_browse_url(self, keyword, filters):
+        default_filters = BrowseFilters.get_defaults()
+        default_filters.update(filters)
+        if BrowseFilters.TRAIT not in filters:
+            default_filters.pop(BrowseFilters.TRAIT2)
+        url = self.URL + f"browse/{keyword}?"
+        url += "&".join([f"{key}={value}" for key, value in default_filters.items()])
+        url = url.replace("!traitList", "traitList")
+        return url
+
+    def browse(self, endpoint, filters):
+        url_filters = {}
+        for key, value in filters.items():
+            url_filters[key] = urllib.parse.quote(str(value))
+        url = self._get_browse_url(endpoint, url_filters)
+        return self._get_response(url)
+
+    def iterate_browse(self, endpoint, filters_list):
+        i = 0
+        while i < len(filters_list):
+            filters = filters_list[i]
+            try:
+                results = self.browse(endpoint, filters)
+                time.sleep(1)
+                i += 1
+                yield filters, results
+
+            except Exception as e:
+                print(f"Retrying filter {filters} in 10 seconds...")
+                time.sleep(10)
 
 
 def save_json(folder, filename, obj):
@@ -126,21 +153,6 @@ def get_json(folder, filename):
         return json.load(f)
 
 
-def iterate_browse(endpoint, filters_list):
-    i = 0
-    while i < len(filters_list):
-        filters = filters_list[i]
-        try:
-            results = browse(endpoint, filters)
-            time.sleep(1)
-            i += 1
-            yield filters, results
-
-        except Exception as e:
-            print(f"Retrying filter {filters} in 10 seconds...")
-            time.sleep(10)
-
-
 def get_all_blood_traits():
     tissues = get_json("ewas_database", "all_tissues")
     blood_tissues = [tissue for tissue in tissues if "blood" in tissue]
@@ -153,7 +165,7 @@ def get_all_blood_traits():
         BrowseFilters.LIMIT: 10
     } for tissue in blood_tissues]
 
-    for filters, result in iterate_browse(BrowseEndpoints.TRAIT, filters_list=filters_list):
+    for filters, result in EWASDatabaseBrowser().iterate_browse(BrowseEndpoints.TRAIT, filters_list=filters_list):
         print(f"Total results for tissue {filters[BrowseFilters.TISSUE]}: {result['total']}")
         result = result['content']
         for r in result:
