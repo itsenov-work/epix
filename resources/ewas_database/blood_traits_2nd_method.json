@@ -1,0 +1,165 @@
+{
+    "1,6-hexamethylene diisocyanate exposure": [
+        "peripheral blood mononuclear cell"
+    ],
+    "17q12 deletion": [
+        "whole blood"
+    ],
+    "Breast Cancer": [
+        "blood"
+    ],
+    "Claes-Jensen syndrome": [
+        "peripheral blood"
+    ],
+    "HIV infection": [
+        "blood"
+    ],
+    "Kabuki syndrome (KS)": [
+        "peripheral blood"
+    ],
+    "abdominal obesity": [
+        "whole blood"
+    ],
+    "absolute fat free mass (FFM, kg)": [
+        "whole blood"
+    ],
+    "absolute fat mass (FM, kg)": [
+        "whole blood"
+    ],
+    "acute coronary syndrome": [
+        "whole blood"
+    ],
+    "acute mania": [
+        "whole blood"
+    ],
+    "acute myelocytic leukemia (AML)": [
+        "whole blood"
+    ],
+    "acute respiratory distress syndrome (ARDS)": [
+        "whole blood"
+    ],
+    "aggressive behavior": [
+        "whole blood"
+    ],
+    "aging": [
+        "blood",
+        "peripheral blood mononuclear cell",
+        "whole blood"
+    ],
+    "alcohol consumption": [
+        "blood"
+    ],
+    "allergic rhinitis": [
+        "peripheral blood mononuclear cell"
+    ],
+    "aortic valve stenosis (AVS)": [
+        "peripheral blood lymphocyte"
+    ],
+    "arsenic exposure": [
+        "peripheral blood mononuclear cell"
+    ],
+    "asthma": [
+        "blood",
+        "white blood cells"
+    ],
+    "attention-deficit/hyperactivity disorder (ADHD)": [
+        "blood",
+        "peripheral blood"
+    ],
+    "autism spectrum disorders (ASD)": [
+        "blood spot"
+    ],
+    "behavioral disorders": [
+        "neonatal blood"
+    ],
+    "birth weight": [
+        "Peripheral whole blood",
+        "blood",
+        "bloodspot"
+    ],
+    "body mass index (BMI)": [
+        "blood",
+        "peripheral blood mononuclear cell"
+    ],
+    "breastfeeding": [
+        "peripheral blood"
+    ],
+    "childhood asthma": [
+        "peripheral blood mononuclear cell"
+    ],
+    "chronic obstructive pulmonary disease (COPD)": [
+        "peripheral blood mononuclear cell"
+    ],
+    "coarctation in neonates": [
+        "blood spot"
+    ],
+    "cognitive impairment": [
+        "peripheral blood mononuclear cell"
+    ],
+    "colorectal cancer susceptibility": [
+        "peripheral blood"
+    ],
+    "diastolic blood pressure": [
+        "blood"
+    ],
+    "disorders of psychological development": [
+        "neonatal blood"
+    ],
+    "exercise": [
+        "blood"
+    ],
+    "fetal intolerance of labor": [
+        "peripheral blood mononuclear cell"
+    ],
+    "first-onset schizophrenia": [
+        "peripheral blood"
+    ],
+    "fruit consumption": [
+        "peripheral blood mononuclear cell"
+    ],
+    "gestational age": [
+        "bloodspot"
+    ],
+    "intellectual disability": [
+        "neonatal blood"
+    ],
+    "ischemic stroke": [
+        "peripheral blood"
+    ],
+    "major depression disorder": [
+        "peripheral blood"
+    ],
+    "maternal preconceptional and pregnancy micronutrient interventions": [
+        "peripheral blood"
+    ],
+    "maternal smoking": [
+        "blood spot",
+        "bloodspot",
+        "heel stick blood"
+    ],
+    "oculo-auriculo-vertebral-spectrum": [
+        "peripheral blood lymphocyte"
+    ],
+    "orofacial cleft": [
+        "bloodspot"
+    ],
+    "preterm birth": [
+        "nucleated red blood cell"
+    ],
+    "psychiatric": [
+        "neonatal blood"
+    ],
+    "schizophrenia": [
+        "neonatal blood"
+    ],
+    "smoking": [
+        "blood spot",
+        "peripheral blood"
+    ],
+    "tissue": [
+        "sperm  blood"
+    ],
+    "treated with assisted reproductive technology": [
+        "neonatal blood"
+    ]
+}

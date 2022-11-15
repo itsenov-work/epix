@@ -1,0 +1,320 @@
+Trait: 1,6-hexamethylene diisocyanate exposure Tissues: {'peripheral blood mononuclear cell'}
+Trait: 17q12 deletion Tissues: {'whole blood'}
+Trait: Alzheimer's disease (AD) Tissues: {'blood', 'whole blood'}
+Trait: Bacteroidetes-to-Firmicutes (BFR) ratio in stool Tissues: {'whole blood'}
+Trait: Behcet's disease Tissues: {'whole blood'}
+Trait: COVID-19 Tissues: {'whole blood'}
+Trait: Claes-Jensen syndrome Tissues: {'peripheral blood'}
+Trait: Coffin–Siris syndrome (CSS) Tissues: {'whole blood'}
+Trait: Creutzfeldt–Jakob disease Tissues: {'blood'}
+Trait: Crohn's disease (CD) Tissues: {'whole blood'}
+Trait: Dioxin-like compound exposure Tissues: {'whole blood'}
+Trait: Gulf War Illness Tissues: {'peripheral blood mononuclear cell'}
+Trait: HIV infection Tissues: {'whole blood', 'peripheral blood mononuclear cell', 'blood'}
+Trait: Huntington's disease (HD) Tissues: {'whole blood'}
+Trait: Huntington’s disease Tissues: {'whole blood'}
+Trait: IgA nephropathy (IgAN) Tissues: {'blood'}
+Trait: IgG glycosylation Tissues: {'whole blood'}
+Trait: Kabuki syndrome (KS) Tissues: {'whole blood', 'peripheral blood'}
+Trait: Kalahari KhoeSan individuals Tissues: {'blood'}
+Trait: Kawasaki disease (KD) Tissues: {'peripheral blood mononuclear cell'}
+Trait: Maternal atopy Tissues: {'cord blood'}
+Trait: Nicolaides–Baraitser syndrome (NCBRS) Tissues: {'whole blood'}
+Trait: PBMC extract VEGF-A concentration Tissues: {'whole blood'}
+Trait: Parkinson's disease (PD) Tissues: {'peripheral blood mononuclear cell', 'whole blood'}
+Trait: Pb exposure Tissues: {'whole blood'}
+Trait: Prenatal Depressive Tissues: {'blood'}
+Trait: SETD1B-related syndrome Tissues: {'whole blood'}
+Trait: Trihalomethanes (THM) exposure Tissues: {'whole blood'}
+Trait: Werner syndrome Tissues: {'whole blood'}
+Trait: a lifestyle intervention in pregnant women with obesity Tissues: {'blood'}
+Trait: abdominal obesity Tissues: {'whole blood'}
+Trait: absolute fat free mass (FFM, kg) Tissues: {'whole blood'}
+Trait: absolute fat mass (FM, kg) Tissues: {'whole blood'}
+Trait: acute lymphocytic leukemia (ALL) survival Tissues: {'whole blood'}
+Trait: acute mania Tissues: {'whole blood'}
+Trait: acute myelocytic leukemia (AML) Tissues: {'whole blood'}
+Trait: acute myelocytic leukemia (AML) survival Tissues: {'whole blood'}
+Trait: adiposity Tissues: {'cord blood'}
+Trait: age at Birth Tissues: {'cord blood'}
+Trait: aging Tissues: {'whole blood', 'blood', 'peripheral blood mononuclear cell', 'cord blood'}
+Trait: air pollution (NO2) Tissues: {'whole blood'}
+Trait: air pollution (PM10) Tissues: {'whole blood'}
+Trait: air pollution (PM2.5) Tissues: {'whole blood'}
+Trait: alcohol consumption Tissues: {'blood', 'whole blood'}
+Trait: allergic rhinitis Tissues: {'peripheral blood mononuclear cell'}
+Trait: allergic sensitization Tissues: {'whole blood', 'cord blood'}
+Trait: amygdala:hippocampal (AH) volume Tissues: {'whole blood'}
+Trait: amyotrophic lateral sclerosis Tissues: {'whole blood'}
+Trait: ankylosing spondylitis Tissues: {'whole blood'}
+Trait: ankylosis spondylitis (AS) Tissues: {'whole blood'}
+Trait: anxiety Tissues: {'whole blood'}
+Trait: arsenic exposure Tissues: {'whole blood', 'peripheral blood mononuclear cell'}
+Trait: arsenic-induced skin lesion Tissues: {'whole blood'}
+Trait: assisted reproduction technology (ART) Tissues: {'umbilical cord blood', 'cord blood'}
+Trait: asthma Tissues: {'blood', 'whole blood', 'white blood cells'}
+Trait: asthma remission Tissues: {'whole blood'}
+Trait: atherosclerosis Tissues: {'whole blood'}
+Trait: atopic asthma Tissues: {'whole blood'}
+Trait: atypical antipsychotic-induced insulin resistance Tissues: {'whole blood'}
+Trait: autistic trait Tissues: {'cord blood'}
+Trait: autoimmune thyroiditis Tissues: {'whole blood'}
+Trait: bariatric surgery Tissues: {'whole blood', 'peripheral blood mononuclear cell'}
+Trait: birth weight Tissues: {'blood', 'whole blood', 'cord blood', 'Peripheral whole blood', 'bloodspot'}
+Trait: birthweight Tissues: {'cord blood'}
+Trait: bladder cancer Tissues: {'whole blood'}
+Trait: blood C-reactive protein level Tissues: {'whole blood', 'cord blood'}
+Trait: blood HbA1c levels Tissues: {'whole blood'}
+Trait: blood high-density lipoprotein (HDL) levels Tissues: {'blood', 'whole blood'}
+Trait: blood lipids level Tissues: {'whole blood'}
+Trait: blood low density lipoprotein (LDL) levels Tissues: {'whole blood'}
+Trait: blood phosphatidylethanol level Tissues: {'whole blood'}
+Trait: blood pressure Tissues: {'blood'}
+Trait: blood protein biomarker levels Tissues: {'whole blood'}
+Trait: blood triglyceride levels Tissues: {'whole blood'}
+Trait: body mass index (BMI) Tissues: {'whole blood', 'blood', 'peripheral blood mononuclear cell', 'cord blood'}
+Trait: body mass index (BMI) change Tissues: {'whole blood'}
+Trait: bone mineral density (BMD) Tissues: {'whole blood'}
+Trait: breast cancer Tissues: {'blood', 'whole blood'}
+Trait: breast cancer risk Tissues: {'whole blood', 'blood', 'peripheral blood mononuclear cell'}
+Trait: breastfeeding Tissues: {'peripheral blood'}
+Trait: bullying exposure Tissues: {'whole blood'}
+Trait: cannabis exposure Tissues: {'whole blood'}
+Trait: cardiac autonomic responses (acceleration capacity) Tissues: {'whole blood'}
+Trait: cardiac autonomic responses (deceleration capacity) Tissues: {'whole blood'}
+Trait: cardiovascular disease risk Tissues: {'blood', 'whole blood'}
+Trait: cardiovascular risk Tissues: {'whole blood'}
+Trait: central adiposity Tissues: {'blood'}
+Trait: cerebral palsy Tissues: {'cord blood'}
+Trait: child hunger Tissues: {'blood'}
+Trait: childhood asthma Tissues: {'whole blood', 'peripheral blood mononuclear cell', 'cord blood'}
+Trait: childhood obesity Tissues: {'whole blood'}
+Trait: childhood sexual victimization Tissues: {'whole blood'}
+Trait: circulating TNF-α concentration Tissues: {'whole blood'}
+Trait: cisplatin treatment Tissues: {'whole blood'}
+Trait: clopidogrel resistance Tissues: {'whole blood'}
+Trait: coarctation in neonates Tissues: {'blood spot'}
+Trait: cognitive function Tissues: {'whole blood'}
+Trait: cognitive impairment Tissues: {'peripheral blood mononuclear cell'}
+Trait: congenital hypopituitarism Tissues: {'whole blood'}
+Trait: cow's milk allergy Tissues: {'whole blood'}
+Trait: death risk Tissues: {'blood'}
+Trait: depression Tissues: {'blood'}
+Trait: derivatives of reactive oxygen metabolites (D-ROM) in plasma Tissues: {'whole blood'}
+Trait: diastolic blood pressure Tissues: {'blood', 'whole blood'}
+Trait: diet quality Tissues: {'whole blood'}
+Trait: diffuse cutaneous systemic sclerosis Tissues: {'whole blood'}
+Trait: dilated cardiomyopathy (DCM) Tissues: {'whole blood'}
+Trait: down syndrome Tissues: {'whole blood'}
+Trait: early onset intracranial atherosclerotic stenosis Tissues: {'whole blood'}
+Trait: early social deprivation Tissues: {'whole blood'}
+Trait: educational attainment Tissues: {'whole blood'}
+Trait: end-stage kidney  disease attributed to diabetic kidney disease Tissues: {'blood'}
+Trait: endotypes in difficult-to-control asthma Tissues: {'whole blood'}
+Trait: epithelial ovarian cancer (EOC) Tissues: {'whole blood'}
+Trait: estimated glomerular filtration rate (eGFR) Tissues: {'whole blood'}
+Trait: exercise Tissues: {'blood'}
+Trait: exercise plus carbohydrate diet Tissues: {'blood'}
+Trait: exhaled carbon monoxide Tissues: {'cord blood'}
+Trait: facial aging Tissues: {'whole blood'}
+Trait: familial hypercholesterolemia Tissues: {'whole blood'}
+Trait: fasting plasma glucose Tissues: {'whole blood'}
+Trait: fatigue Tissues: {'whole blood'}
+Trait: fertility treatment Tissues: {'blood'}
+Trait: firefighter Tissues: {'whole blood'}
+Trait: first-onset schizophrenia Tissues: {'peripheral blood'}
+Trait: folic acid supplement during pregnancy Tissues: {'cord blood'}
+Trait: frequency of heavy vehicle traffic Tissues: {'whole blood'}
+Trait: fruit consumption Tissues: {'peripheral blood mononuclear cell'}
+Trait: gender Tissues: {'whole blood', 'peripheral blood mononuclear cell'}
+Trait: gestational age Tissues: {'bloodspot'}
+Trait: gestational diabetes mellitus Tissues: {'whole blood', 'cord blood'}
+Trait: gingival bleeding Tissues: {'whole blood'}
+Trait: glycemic  response to glucagon- like peptide-1  analog therapy in type 2  diabetes mellitus Tissues: {'peripheral blood'}
+Trait: hepatic fat Tissues: {'whole blood'}
+Trait: hepatic steatosis Tissues: {'whole blood'}
+Trait: hepatocellular carcinoma (HCC) Tissues: {'whole blood'}
+Trait: hippocampus volume Tissues: {'whole blood'}
+Trait: homocysteine levels Tissues: {'whole blood'}
+Trait: hypertension Tissues: {'whole blood'}
+Trait: hypertriglyceridemic waist Tissues: {'whole blood'}
+Trait: impaired fasting glucose (IFG) Tissues: {'whole blood'}
+Trait: in utero arsenic exposure Tissues: {'cord blood'}
+Trait: infancy with toddler attachment style Tissues: {'whole blood'}
+Trait: infant sex Tissues: {'cord blood'}
+Trait: infection‑caused Leukocytopenia Tissues: {'whole blood'}
+Trait: infertility Tissues: {'whole blood'}
+Trait: insufficient sleep Tissues: {'whole blood'}
+Trait: intellectual disability Tissues: {'neonatal blood'}
+Trait: intracytoplasmic sperm injection Tissues: {'cord blood'}
+Trait: ischemic moyamoya disease (MMD) Tissues: {'whole blood'}
+Trait: ischemic stroke Tissues: {'blood', 'whole blood', 'peripheral blood'}
+Trait: juice consumption Tissues: {'peripheral blood mononuclear cell'}
+Trait: kidney disease Tissues: {'whole blood'}
+Trait: leukoaraiosis (LA) Tissues: {'whole blood'}
+Trait: leukocytosis Tissues: {'whole blood'}
+Trait: lifetime estrogen exposure Tissues: {'whole blood'}
+Trait: limited cutaneous systemic sclerosis Tissues: {'whole blood'}
+Trait: liver fat fraction at 10 years Tissues: {'peripheral blood mononuclear cell', 'cord blood'}
+Trait: longevity Tissues: {'whole blood'}
+Trait: low birth weight Tissues: {'cord blood'}
+Trait: low carbohydrate diet Tissues: {'blood'}
+Trait: lubrication Tissues: {'whole blood'}
+Trait: lung cancer Tissues: {'blood'}
+Trait: lung cancer risk Tissues: {'whole blood'}
+Trait: lung carcinoma Tissues: {'blood'}
+Trait: lung function Tissues: {'blood', 'whole blood'}
+Trait: malignant pleural mesothelioma Tissues: {'whole blood'}
+Trait: mammographic density measure Tissues: {'whole blood'}
+Trait: maternal Hepatitis B virus (HBV) infection Tissues: {'umbilical cord blood'}
+Trait: maternal NO2 exposure during pregnancy Tissues: {'whole blood', 'cord blood'}
+Trait: maternal PM10 exposure Tissues: {'cord blood'}
+Trait: maternal PM10 exposure in fifth gestational week Tissues: {'whole blood'}
+Trait: maternal PM10 exposure in first trimester Tissues: {'whole blood'}
+Trait: maternal PM10 exposure in fourth gestational week Tissues: {'whole blood'}
+Trait: maternal PM10 exposure in pregnancy Tissues: {'whole blood'}
+Trait: maternal PM10 exposure in second gestational week Tissues: {'whole blood'}
+Trait: maternal PM10 exposure in the first month Tissues: {'whole blood'}
+Trait: maternal PM10 exposure in the last month Tissues: {'whole blood'}
+Trait: maternal PM10 exposure in third gestational week Tissues: {'whole blood'}
+Trait: maternal PM10 exposure in third trimester Tissues: {'whole blood'}
+Trait: maternal alcohol consumption Tissues: {'cord blood'}
+Trait: maternal cadmium exposure Tissues: {'cord blood'}
+Trait: maternal depression Tissues: {'cord blood T lymphocyte', 'cord blood'}
+Trait: maternal education Tissues: {'whole blood', 'cord blood'}
+Trait: maternal exposure to heavy metals Tissues: {'umbilical cord blood'}
+Trait: maternal famine exposure Tissues: {'whole blood'}
+Trait: maternal fatty acid concentrations Tissues: {'cord blood'}
+Trait: maternal haemoglobin levels in pregnancy Tissues: {'blood'}
+Trait: maternal insulin sensitivity Tissues: {'cord blood'}
+Trait: maternal lead exposure Tissues: {'blood', 'whole blood', 'cord blood'}
+Trait: maternal low glycaemic index diet Tissues: {'cord blood'}
+Trait: maternal phthalate exposure Tissues: {'cord blood'}
+Trait: maternal pre-pregnancy body mass index (BMI) Tissues: {'whole blood', 'cord blood'}
+Trait: maternal pre-pregnancy central obesity Tissues: {'cord blood'}
+Trait: maternal pre-pregnancy obesity Tissues: {'whole blood', 'cord blood'}
+Trait: maternal pre-pregnancy serum leptin Tissues: {'cord blood'}
+Trait: maternal pre-pregnancy sum of skinfolds Tissues: {'cord blood'}
+Trait: maternal pre-pregnancy waist circumference (WC) Tissues: {'cord blood'}
+Trait: maternal pre-pregnancy waist to hip ratio (WHR) Tissues: {'cord blood'}
+Trait: maternal radon exposure Tissues: {'cord blood'}
+Trait: maternal rheumatoid arthritis Tissues: {'whole blood'}
+Trait: maternal smoking Tissues: {'blood spot', 'whole blood', 'cord blood', 'umbilical cord blood', 'bloodspot', 'heel stick blood'}
+Trait: mean arterial pressure Tissues: {'whole blood'}
+Trait: meditation practice Tissues: {'peripheral blood mononuclear cell'}
+Trait: mediterranean diet during pregnancy Tissues: {'cord blood'}
+Trait: metabolic syndrome (MetS) Tissues: {'whole blood', 'peripheral blood mononuclear cell', 'cord blood'}
+Trait: metabolic trait Tissues: {'whole blood', 'cord blood'}
+Trait: mixed connective tissue disease (MCTD) Tissues: {'whole blood'}
+Trait: multiple risk behaviours Tissues: {'whole blood'}
+Trait: multiple sclerosis Tissues: {'peripheral blood mononuclear cell'}
+Trait: myocardial infarction Tissues: {'whole blood'}
+Trait: myopia Tissues: {'whole blood'}
+Trait: narcolepsy Tissues: {'whole blood'}
+Trait: neonatal leptin Tissues: {'cord blood'}
+Trait: neuroinflammation Tissues: {'blood'}
+Trait: non-atopic asthma Tissues: {'whole blood'}
+Trait: non-small cell lung carcinoma (NSCLC) Tissues: {'whole blood'}
+Trait: obesity Tissues: {'whole blood', 'peripheral blood mononuclear cell'}
+Trait: occupational pesticide exposure Tissues: {'whole blood'}
+Trait: oculo-auriculo-vertebral-spectrum Tissues: {'peripheral blood lymphocyte'}
+Trait: one-year moving averages of PM2.5 species (Fe) Tissues: {'whole blood'}
+Trait: one-year moving averages of PM2.5 species (Ni) Tissues: {'whole blood'}
+Trait: one-year moving averages of PM2.5 species (V) Tissues: {'whole blood'}
+Trait: opioid dependence (OD) Tissues: {'whole blood'}
+Trait: osteoarthritis (OA) Tissues: {'peripheral blood mononuclear cell'}
+Trait: ozone effects Tissues: {'blood'}
+Trait: paternal body mass index (BMI) Tissues: {'cord blood'}
+Trait: paternal smoking Tissues: {'whole blood'}
+Trait: paternal uniparental disomy Tissues: {'peripheral blood'}
+Trait: perceived discrimination Tissues: {'whole blood'}
+Trait: perinatally-acquired HIV Tissues: {'whole blood'}
+Trait: phlegm-dampness constitution Tissues: {'peripheral blood mononuclear cell'}
+Trait: physical activity Tissues: {'whole blood'}
+Trait: physical frailty Tissues: {'whole blood'}
+Trait: plasma adiponectin levels Tissues: {'whole blood'}
+Trait: plasma fasting glucose levels Tissues: {'whole blood'}
+Trait: plasma fasting insulin levels Tissues: {'whole blood'}
+Trait: plasma homocysteine (Hcy) levels Tissues: {'whole blood'}
+Trait: plasma resistin levels Tissues: {'whole blood'}
+Trait: polybrominated biphenyl exposure of female Tissues: {'peripheral blood'}
+Trait: polybrominated biphenyl exposure of male Tissues: {'peripheral blood'}
+Trait: polybrominated diphenyl ethers Tissues: {'whole blood'}
+Trait: polycystic ovary syndrome (PCOS) Tissues: {'umbilical cord blood'}
+Trait: poverty status Tissues: {'peripheral blood mononuclear cell'}
+Trait: preeclampsia Tissues: {'blood', 'whole blood', 'cord blood'}
+Trait: prenatal PM 2.5 exposure Tissues: {'cord blood'}
+Trait: prenatal arsenic exposure Tissues: {'cord blood'}
+Trait: prenatal bisphenol A (BPA) exposure Tissues: {'umbilical cord blood', 'cord blood'}
+Trait: prenatal exposure to maternal stress Tissues: {'cord blood'}
+Trait: prenatal maternal antidepressants Tissues: {'cord blood'}
+Trait: prenatal maternal metabolite levels Tissues: {'cord blood'}
+Trait: prenatal mercury (Hg) exposure Tissues: {'cord blood'}
+Trait: prenatal paracetamol exposure Tissues: {'cord blood'}
+Trait: prenatal phthalate exposure Tissues: {'cord blood'}
+Trait: prenatal socioeconomic status Tissues: {'cord blood'}
+Trait: preterm birth Tissues: {'nucleated red blood cell', 'whole blood', 'cord blood'}
+Trait: primary Sjögren's Syndrome (pSS) Tissues: {'whole blood'}
+Trait: prostate cancer Tissues: {'blood'}
+Trait: psychiatric Tissues: {'neonatal blood'}
+Trait: psychosis Tissues: {'whole blood'}
+Trait: psychotic experience Tissues: {'whole blood', 'cord blood'}
+Trait: puberty Tissues: {'peripheral blood mononuclear cell'}
+Trait: pulse pressure Tissues: {'whole blood'}
+Trait: recurrent stroke Tissues: {'whole blood'}
+Trait: response to antidepressants Tissues: {'whole blood'}
+Trait: response to influenza vaccination Tissues: {'peripheral blood mononuclear cell'}
+Trait: response to paroxetine Tissues: {'whole blood'}
+Trait: response to phylloquinone (vitamin K1) supplementation Tissues: {'whole blood'}
+Trait: rheumatoid arthritis (RA) Tissues: {'whole blood'}
+Trait: riboflavin intake Tissues: {'peripheral blood mononuclear cell'}
+Trait: right insular surface area Tissues: {'whole blood'}
+Trait: risk of future myocardial infarction Tissues: {'whole blood'}
+Trait: sarcopenic Tissues: {'whole blood'}
+Trait: satisfaction Tissues: {'whole blood'}
+Trait: schizophrenia Tissues: {'neonatal blood', 'whole blood'}
+Trait: season of birth Tissues: {'whole blood'}
+Trait: seizure Tissues: {'whole blood', 'cord blood'}
+Trait: sepsis Tissues: {'whole blood'}
+Trait: serum 25-hydroxyvitamin D levels Tissues: {'whole blood'}
+Trait: serum IL-10 levels Tissues: {'peripheral blood mononuclear cell'}
+Trait: serum IL6 levels Tissues: {'peripheral blood mononuclear cell'}
+Trait: serum IL8 levels Tissues: {'peripheral blood mononuclear cell'}
+Trait: serum TNF levels Tissues: {'peripheral blood mononuclear cell'}
+Trait: serum immunoglobulin E (IgE) levels Tissues: {'cord blood'}
+Trait: serum liver enzyme levels (alanine aminotransferase, ALT) Tissues: {'whole blood'}
+Trait: serum liver enzyme levels (gamma-glutamyl transferase, GGT) Tissues: {'whole blood'}
+Trait: severe adolescent victimization Tissues: {'blood'}
+Trait: severe sepsis Tissues: {'whole blood'}
+Trait: sex Tissues: {'cord blood'}
+Trait: sexual abuse Tissues: {'whole blood'}
+Trait: sexual desire Tissues: {'whole blood'}
+Trait: sexual functioning Tissues: {'whole blood'}
+Trait: smoking Tissues: {'peripheral blood mononuclear cell', 'blood', 'blood spot', 'whole blood', 'peripheral blood'}
+Trait: smoking cessation Tissues: {'blood', 'whole blood'}
+Trait: stressful life event Tissues: {'whole blood'}
+Trait: substance-use risk Tissues: {'whole blood'}
+Trait: suicide attempt Tissues: {'whole blood'}
+Trait: suicide attempt in schizophrenia Tissues: {'blood'}
+Trait: systemic lupus erythematosus (SLE) Tissues: {'whole blood', 'peripheral blood mononuclear cell'}
+Trait: systemic sclerosis Tissues: {'blood', 'whole blood'}
+Trait: systolic blood pressure Tissues: {'blood', 'whole blood'}
+Trait: t(1;11) translocation Tissues: {'whole blood'}
+Trait: tea consumption Tissues: {'whole blood'}
+Trait: television viewing time Tissues: {'whole blood'}
+Trait: tissue Tissues: {'sperm  blood'}
+Trait: tooth mobility Tissues: {'whole blood'}
+Trait: total cholesterol Tissues: {'whole blood'}
+Trait: total thiol levels (TTL) in plasma Tissues: {'whole blood'}
+Trait: treated with assisted reproductive technology Tissues: {'neonatal blood', 'whole blood'}
+Trait: twin birth Tissues: {'whole blood'}
+Trait: type 1 diabetes (T1D) Tissues: {'whole blood'}
+Trait: type 1 diabetes with develop diabetic kidney disease Tissues: {'blood'}
+Trait: type 2 diabetes (T2D) Tissues: {'whole blood', 'blood', 'peripheral blood mononuclear cell'}
+Trait: urinary Arsenic Tissues: {'blood'}
+Trait: vegan Tissues: {'blood'}
+Trait: vitamin B12 supplement Tissues: {'whole blood'}
+Trait: waist circumference (WC) Tissues: {'blood', 'whole blood'}
+Trait: weight loss Tissues: {'blood', 'peripheral blood mononuclear cell'}
+Trait: wellbeing Tissues: {'whole blood'}
+Trait: wheeze Tissues: {'whole blood'}

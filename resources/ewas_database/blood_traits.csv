@@ -1,0 +1,321 @@
+Disease,Peripheral whole blood,blood,blood spot,bloodspot,cord blood,cord blood T lymphocyte,heel stick blood,neonatal blood,nucleated red blood cell,peripheral blood,peripheral blood lymphocyte,peripheral blood mononuclear cell,sperm  blood,umbilical cord blood,white blood cells,whole blood
+"1,6-hexamethylene diisocyanate exposure",,,,,,,,,,,,True,,,,
+17q12 deletion,,,,,,,,,,,,,,,,True
+Alzheimer's disease (AD),,True,,,,,,,,,,,,,,True
+Bacteroidetes-to-Firmicutes (BFR) ratio in stool,,,,,,,,,,,,,,,,True
+Behcet's disease,,,,,,,,,,,,,,,,True
+COVID-19,,,,,,,,,,,,,,,,True
+Claes-Jensen syndrome,,,,,,,,,,True,,,,,,
+Coffin–Siris syndrome (CSS),,,,,,,,,,,,,,,,True
+Creutzfeldt–Jakob disease,,True,,,,,,,,,,,,,,
+Crohn's disease (CD),,,,,,,,,,,,,,,,True
+Dioxin-like compound exposure,,,,,,,,,,,,,,,,True
+Gulf War Illness,,,,,,,,,,,,True,,,,
+HIV infection,,True,,,,,,,,,,True,,,,True
+Huntington's disease (HD),,,,,,,,,,,,,,,,True
+Huntington’s disease,,,,,,,,,,,,,,,,True
+IgA nephropathy (IgAN),,True,,,,,,,,,,,,,,
+IgG glycosylation,,,,,,,,,,,,,,,,True
+Kabuki syndrome (KS),,,,,,,,,,True,,,,,,True
+Kalahari KhoeSan individuals,,True,,,,,,,,,,,,,,
+Kawasaki disease (KD),,,,,,,,,,,,True,,,,
+Maternal atopy,,,,,True,,,,,,,,,,,
+Nicolaides–Baraitser syndrome (NCBRS),,,,,,,,,,,,,,,,True
+PBMC extract VEGF-A concentration,,,,,,,,,,,,,,,,True
+Parkinson's disease (PD),,,,,,,,,,,,True,,,,True
+Pb exposure,,,,,,,,,,,,,,,,True
+Prenatal Depressive,,True,,,,,,,,,,,,,,
+SETD1B-related syndrome,,,,,,,,,,,,,,,,True
+Trihalomethanes (THM) exposure,,,,,,,,,,,,,,,,True
+Werner syndrome,,,,,,,,,,,,,,,,True
+a lifestyle intervention in pregnant women with obesity,,True,,,,,,,,,,,,,,
+abdominal obesity,,,,,,,,,,,,,,,,True
+"absolute fat free mass (FFM, kg)",,,,,,,,,,,,,,,,True
+"absolute fat mass (FM, kg)",,,,,,,,,,,,,,,,True
+acute lymphocytic leukemia (ALL) survival,,,,,,,,,,,,,,,,True
+acute mania,,,,,,,,,,,,,,,,True
+acute myelocytic leukemia (AML),,,,,,,,,,,,,,,,True
+acute myelocytic leukemia (AML) survival,,,,,,,,,,,,,,,,True
+adiposity,,,,,True,,,,,,,,,,,
+age at Birth,,,,,True,,,,,,,,,,,
+aging,,True,,,True,,,,,,,True,,,,True
+air pollution (NO2),,,,,,,,,,,,,,,,True
+air pollution (PM10),,,,,,,,,,,,,,,,True
+air pollution (PM2.5),,,,,,,,,,,,,,,,True
+alcohol consumption,,True,,,,,,,,,,,,,,True
+allergic rhinitis,,,,,,,,,,,,True,,,,
+allergic sensitization,,,,,True,,,,,,,,,,,True
+amygdala:hippocampal (AH) volume,,,,,,,,,,,,,,,,True
+amyotrophic lateral sclerosis,,,,,,,,,,,,,,,,True
+ankylosing spondylitis,,,,,,,,,,,,,,,,True
+ankylosis spondylitis (AS),,,,,,,,,,,,,,,,True
+anxiety,,,,,,,,,,,,,,,,True
+arsenic exposure,,,,,,,,,,,,True,,,,True
+arsenic-induced skin lesion,,,,,,,,,,,,,,,,True
+assisted reproduction technology (ART),,,,,True,,,,,,,,,True,,
+asthma,,True,,,,,,,,,,,,,True,True
+asthma remission,,,,,,,,,,,,,,,,True
+atherosclerosis,,,,,,,,,,,,,,,,True
+atopic asthma,,,,,,,,,,,,,,,,True
+atypical antipsychotic-induced insulin resistance,,,,,,,,,,,,,,,,True
+autistic trait,,,,,True,,,,,,,,,,,
+autoimmune thyroiditis,,,,,,,,,,,,,,,,True
+bariatric surgery,,,,,,,,,,,,True,,,,True
+birth weight,True,True,,True,True,,,,,,,,,,,True
+birthweight,,,,,True,,,,,,,,,,,
+bladder cancer,,,,,,,,,,,,,,,,True
+blood C-reactive protein level,,,,,True,,,,,,,,,,,True
+blood HbA1c levels,,,,,,,,,,,,,,,,True
+blood high-density lipoprotein (HDL) levels,,True,,,,,,,,,,,,,,True
+blood lipids level,,,,,,,,,,,,,,,,True
+blood low density lipoprotein (LDL) levels,,,,,,,,,,,,,,,,True
+blood phosphatidylethanol level,,,,,,,,,,,,,,,,True
+blood pressure,,True,,,,,,,,,,,,,,
+blood protein biomarker levels,,,,,,,,,,,,,,,,True
+blood triglyceride levels,,,,,,,,,,,,,,,,True
+body mass index (BMI),,True,,,True,,,,,,,True,,,,True
+body mass index (BMI) change,,,,,,,,,,,,,,,,True
+bone mineral density (BMD),,,,,,,,,,,,,,,,True
+breast cancer,,True,,,,,,,,,,,,,,True
+breast cancer risk,,True,,,,,,,,,,True,,,,True
+breastfeeding,,,,,,,,,,True,,,,,,
+bullying exposure,,,,,,,,,,,,,,,,True
+cannabis exposure,,,,,,,,,,,,,,,,True
+cardiac autonomic responses (acceleration capacity),,,,,,,,,,,,,,,,True
+cardiac autonomic responses (deceleration capacity),,,,,,,,,,,,,,,,True
+cardiovascular disease risk,,True,,,,,,,,,,,,,,True
+cardiovascular risk,,,,,,,,,,,,,,,,True
+central adiposity,,True,,,,,,,,,,,,,,
+cerebral palsy,,,,,True,,,,,,,,,,,
+child hunger,,True,,,,,,,,,,,,,,
+childhood asthma,,,,,True,,,,,,,True,,,,True
+childhood obesity,,,,,,,,,,,,,,,,True
+childhood sexual victimization,,,,,,,,,,,,,,,,True
+circulating TNF-α concentration,,,,,,,,,,,,,,,,True
+cisplatin treatment,,,,,,,,,,,,,,,,True
+clopidogrel resistance,,,,,,,,,,,,,,,,True
+coarctation in neonates,,,True,,,,,,,,,,,,,
+cognitive function,,,,,,,,,,,,,,,,True
+cognitive impairment,,,,,,,,,,,,True,,,,
+congenital hypopituitarism,,,,,,,,,,,,,,,,True
+cow's milk allergy,,,,,,,,,,,,,,,,True
+death risk,,True,,,,,,,,,,,,,,
+depression,,True,,,,,,,,,,,,,,
+derivatives of reactive oxygen metabolites (D-ROM) in plasma,,,,,,,,,,,,,,,,True
+diastolic blood pressure,,True,,,,,,,,,,,,,,True
+diet quality,,,,,,,,,,,,,,,,True
+diffuse cutaneous systemic sclerosis,,,,,,,,,,,,,,,,True
+dilated cardiomyopathy (DCM),,,,,,,,,,,,,,,,True
+down syndrome,,,,,,,,,,,,,,,,True
+early onset intracranial atherosclerotic stenosis,,,,,,,,,,,,,,,,True
+early social deprivation,,,,,,,,,,,,,,,,True
+educational attainment,,,,,,,,,,,,,,,,True
+end-stage kidney  disease attributed to diabetic kidney disease,,True,,,,,,,,,,,,,,
+endotypes in difficult-to-control asthma,,,,,,,,,,,,,,,,True
+epithelial ovarian cancer (EOC),,,,,,,,,,,,,,,,True
+estimated glomerular filtration rate (eGFR),,,,,,,,,,,,,,,,True
+exercise,,True,,,,,,,,,,,,,,
+exercise plus carbohydrate diet,,True,,,,,,,,,,,,,,
+exhaled carbon monoxide,,,,,True,,,,,,,,,,,
+facial aging,,,,,,,,,,,,,,,,True
+familial hypercholesterolemia,,,,,,,,,,,,,,,,True
+fasting plasma glucose,,,,,,,,,,,,,,,,True
+fatigue,,,,,,,,,,,,,,,,True
+fertility treatment,,True,,,,,,,,,,,,,,
+firefighter,,,,,,,,,,,,,,,,True
+first-onset schizophrenia,,,,,,,,,,True,,,,,,
+folic acid supplement during pregnancy,,,,,True,,,,,,,,,,,
+frequency of heavy vehicle traffic,,,,,,,,,,,,,,,,True
+fruit consumption,,,,,,,,,,,,True,,,,
+gender,,,,,,,,,,,,True,,,,True
+gestational age,,,,True,,,,,,,,,,,,
+gestational diabetes mellitus,,,,,True,,,,,,,,,,,True
+gingival bleeding,,,,,,,,,,,,,,,,True
+glycemic  response to glucagon- like peptide-1  analog therapy in type 2  diabetes mellitus,,,,,,,,,,True,,,,,,
+hepatic fat,,,,,,,,,,,,,,,,True
+hepatic steatosis,,,,,,,,,,,,,,,,True
+hepatocellular carcinoma (HCC),,,,,,,,,,,,,,,,True
+hippocampus volume,,,,,,,,,,,,,,,,True
+homocysteine levels,,,,,,,,,,,,,,,,True
+hypertension,,,,,,,,,,,,,,,,True
+hypertriglyceridemic waist,,,,,,,,,,,,,,,,True
+impaired fasting glucose (IFG),,,,,,,,,,,,,,,,True
+in utero arsenic exposure,,,,,True,,,,,,,,,,,
+infancy with toddler attachment style,,,,,,,,,,,,,,,,True
+infant sex,,,,,True,,,,,,,,,,,
+infection‑caused Leukocytopenia,,,,,,,,,,,,,,,,True
+infertility,,,,,,,,,,,,,,,,True
+insufficient sleep,,,,,,,,,,,,,,,,True
+intellectual disability,,,,,,,,True,,,,,,,,
+intracytoplasmic sperm injection,,,,,True,,,,,,,,,,,
+ischemic moyamoya disease (MMD),,,,,,,,,,,,,,,,True
+ischemic stroke,,True,,,,,,,,True,,,,,,True
+juice consumption,,,,,,,,,,,,True,,,,
+kidney disease,,,,,,,,,,,,,,,,True
+leukoaraiosis (LA),,,,,,,,,,,,,,,,True
+leukocytosis,,,,,,,,,,,,,,,,True
+lifetime estrogen exposure,,,,,,,,,,,,,,,,True
+limited cutaneous systemic sclerosis,,,,,,,,,,,,,,,,True
+liver fat fraction at 10 years,,,,,True,,,,,,,True,,,,
+longevity,,,,,,,,,,,,,,,,True
+low birth weight,,,,,True,,,,,,,,,,,
+low carbohydrate diet,,True,,,,,,,,,,,,,,
+lubrication,,,,,,,,,,,,,,,,True
+lung cancer,,True,,,,,,,,,,,,,,
+lung cancer risk,,,,,,,,,,,,,,,,True
+lung carcinoma,,True,,,,,,,,,,,,,,
+lung function,,True,,,,,,,,,,,,,,True
+malignant pleural mesothelioma,,,,,,,,,,,,,,,,True
+mammographic density measure,,,,,,,,,,,,,,,,True
+maternal Hepatitis B virus (HBV) infection,,,,,,,,,,,,,,True,,
+maternal NO2 exposure during pregnancy,,,,,True,,,,,,,,,,,True
+maternal PM10 exposure,,,,,True,,,,,,,,,,,
+maternal PM10 exposure in fifth gestational week,,,,,,,,,,,,,,,,True
+maternal PM10 exposure in first trimester,,,,,,,,,,,,,,,,True
+maternal PM10 exposure in fourth gestational week,,,,,,,,,,,,,,,,True
+maternal PM10 exposure in pregnancy,,,,,,,,,,,,,,,,True
+maternal PM10 exposure in second gestational week,,,,,,,,,,,,,,,,True
+maternal PM10 exposure in the first month,,,,,,,,,,,,,,,,True
+maternal PM10 exposure in the last month,,,,,,,,,,,,,,,,True
+maternal PM10 exposure in third gestational week,,,,,,,,,,,,,,,,True
+maternal PM10 exposure in third trimester,,,,,,,,,,,,,,,,True
+maternal alcohol consumption,,,,,True,,,,,,,,,,,
+maternal cadmium exposure,,,,,True,,,,,,,,,,,
+maternal depression,,,,,True,True,,,,,,,,,,
+maternal education,,,,,True,,,,,,,,,,,True
+maternal exposure to heavy metals,,,,,,,,,,,,,,True,,
+maternal famine exposure,,,,,,,,,,,,,,,,True
+maternal fatty acid concentrations,,,,,True,,,,,,,,,,,
+maternal haemoglobin levels in pregnancy,,True,,,,,,,,,,,,,,
+maternal insulin sensitivity,,,,,True,,,,,,,,,,,
+maternal lead exposure,,True,,,True,,,,,,,,,,,True
+maternal low glycaemic index diet,,,,,True,,,,,,,,,,,
+maternal phthalate exposure,,,,,True,,,,,,,,,,,
+maternal pre-pregnancy body mass index (BMI),,,,,True,,,,,,,,,,,True
+maternal pre-pregnancy central obesity,,,,,True,,,,,,,,,,,
+maternal pre-pregnancy obesity,,,,,True,,,,,,,,,,,True
+maternal pre-pregnancy serum leptin,,,,,True,,,,,,,,,,,
+maternal pre-pregnancy sum of skinfolds,,,,,True,,,,,,,,,,,
+maternal pre-pregnancy waist circumference (WC),,,,,True,,,,,,,,,,,
+maternal pre-pregnancy waist to hip ratio (WHR),,,,,True,,,,,,,,,,,
+maternal radon exposure,,,,,True,,,,,,,,,,,
+maternal rheumatoid arthritis,,,,,,,,,,,,,,,,True
+maternal smoking,,,True,True,True,,True,,,,,,,True,,True
+mean arterial pressure,,,,,,,,,,,,,,,,True
+meditation practice,,,,,,,,,,,,True,,,,
+mediterranean diet during pregnancy,,,,,True,,,,,,,,,,,
+metabolic syndrome (MetS),,,,,True,,,,,,,True,,,,True
+metabolic trait,,,,,True,,,,,,,,,,,True
+mixed connective tissue disease (MCTD),,,,,,,,,,,,,,,,True
+multiple risk behaviours,,,,,,,,,,,,,,,,True
+multiple sclerosis,,,,,,,,,,,,True,,,,
+myocardial infarction,,,,,,,,,,,,,,,,True
+myopia,,,,,,,,,,,,,,,,True
+narcolepsy,,,,,,,,,,,,,,,,True
+neonatal leptin,,,,,True,,,,,,,,,,,
+neuroinflammation,,True,,,,,,,,,,,,,,
+non-atopic asthma,,,,,,,,,,,,,,,,True
+non-small cell lung carcinoma (NSCLC),,,,,,,,,,,,,,,,True
+obesity,,,,,,,,,,,,True,,,,True
+occupational pesticide exposure,,,,,,,,,,,,,,,,True
+oculo-auriculo-vertebral-spectrum,,,,,,,,,,,True,,,,,
+one-year moving averages of PM2.5 species (Fe),,,,,,,,,,,,,,,,True
+one-year moving averages of PM2.5 species (Ni),,,,,,,,,,,,,,,,True
+one-year moving averages of PM2.5 species (V),,,,,,,,,,,,,,,,True
+opioid dependence (OD),,,,,,,,,,,,,,,,True
+osteoarthritis (OA),,,,,,,,,,,,True,,,,
+ozone effects,,True,,,,,,,,,,,,,,
+paternal body mass index (BMI),,,,,True,,,,,,,,,,,
+paternal smoking,,,,,,,,,,,,,,,,True
+paternal uniparental disomy,,,,,,,,,,True,,,,,,
+perceived discrimination,,,,,,,,,,,,,,,,True
+perinatally-acquired HIV,,,,,,,,,,,,,,,,True
+phlegm-dampness constitution,,,,,,,,,,,,True,,,,
+physical activity,,,,,,,,,,,,,,,,True
+physical frailty,,,,,,,,,,,,,,,,True
+plasma adiponectin levels,,,,,,,,,,,,,,,,True
+plasma fasting glucose levels,,,,,,,,,,,,,,,,True
+plasma fasting insulin levels,,,,,,,,,,,,,,,,True
+plasma homocysteine (Hcy) levels,,,,,,,,,,,,,,,,True
+plasma resistin levels,,,,,,,,,,,,,,,,True
+polybrominated biphenyl exposure of female,,,,,,,,,,True,,,,,,
+polybrominated biphenyl exposure of male,,,,,,,,,,True,,,,,,
+polybrominated diphenyl ethers,,,,,,,,,,,,,,,,True
+polycystic ovary syndrome (PCOS),,,,,,,,,,,,,,True,,
+poverty status,,,,,,,,,,,,True,,,,
+preeclampsia,,True,,,True,,,,,,,,,,,True
+prenatal PM 2.5 exposure,,,,,True,,,,,,,,,,,
+prenatal arsenic exposure,,,,,True,,,,,,,,,,,
+prenatal bisphenol A (BPA) exposure,,,,,True,,,,,,,,,True,,
+prenatal exposure to maternal stress,,,,,True,,,,,,,,,,,
+prenatal maternal antidepressants,,,,,True,,,,,,,,,,,
+prenatal maternal metabolite levels,,,,,True,,,,,,,,,,,
+prenatal mercury (Hg) exposure,,,,,True,,,,,,,,,,,
+prenatal paracetamol exposure,,,,,True,,,,,,,,,,,
+prenatal phthalate exposure,,,,,True,,,,,,,,,,,
+prenatal socioeconomic status,,,,,True,,,,,,,,,,,
+preterm birth,,,,,True,,,,True,,,,,,,True
+primary Sjögren's Syndrome (pSS),,,,,,,,,,,,,,,,True
+prostate cancer,,True,,,,,,,,,,,,,,
+psychiatric,,,,,,,,True,,,,,,,,
+psychosis,,,,,,,,,,,,,,,,True
+psychotic experience,,,,,True,,,,,,,,,,,True
+puberty,,,,,,,,,,,,True,,,,
+pulse pressure,,,,,,,,,,,,,,,,True
+recurrent stroke,,,,,,,,,,,,,,,,True
+response to antidepressants,,,,,,,,,,,,,,,,True
+response to influenza vaccination,,,,,,,,,,,,True,,,,
+response to paroxetine,,,,,,,,,,,,,,,,True
+response to phylloquinone (vitamin K1) supplementation,,,,,,,,,,,,,,,,True
+rheumatoid arthritis (RA),,,,,,,,,,,,,,,,True
+riboflavin intake,,,,,,,,,,,,True,,,,
+right insular surface area,,,,,,,,,,,,,,,,True
+risk of future myocardial infarction,,,,,,,,,,,,,,,,True
+sarcopenic,,,,,,,,,,,,,,,,True
+satisfaction,,,,,,,,,,,,,,,,True
+schizophrenia,,,,,,,,True,,,,,,,,True
+season of birth,,,,,,,,,,,,,,,,True
+seizure,,,,,True,,,,,,,,,,,True
+sepsis,,,,,,,,,,,,,,,,True
+serum 25-hydroxyvitamin D levels,,,,,,,,,,,,,,,,True
+serum IL-10 levels,,,,,,,,,,,,True,,,,
+serum IL6 levels,,,,,,,,,,,,True,,,,
+serum IL8 levels,,,,,,,,,,,,True,,,,
+serum TNF levels,,,,,,,,,,,,True,,,,
+serum immunoglobulin E (IgE) levels,,,,,True,,,,,,,,,,,
+"serum liver enzyme levels (alanine aminotransferase, ALT)",,,,,,,,,,,,,,,,True
+"serum liver enzyme levels (gamma-glutamyl transferase, GGT)",,,,,,,,,,,,,,,,True
+severe adolescent victimization,,True,,,,,,,,,,,,,,
+severe sepsis,,,,,,,,,,,,,,,,True
+sex,,,,,True,,,,,,,,,,,
+sexual abuse,,,,,,,,,,,,,,,,True
+sexual desire,,,,,,,,,,,,,,,,True
+sexual functioning,,,,,,,,,,,,,,,,True
+smoking,,True,True,,,,,,,True,,True,,,,True
+smoking cessation,,True,,,,,,,,,,,,,,True
+stressful life event,,,,,,,,,,,,,,,,True
+substance-use risk,,,,,,,,,,,,,,,,True
+suicide attempt,,,,,,,,,,,,,,,,True
+suicide attempt in schizophrenia,,True,,,,,,,,,,,,,,
+systemic lupus erythematosus (SLE),,,,,,,,,,,,True,,,,True
+systemic sclerosis,,True,,,,,,,,,,,,,,True
+systolic blood pressure,,True,,,,,,,,,,,,,,True
+t(1;11) translocation,,,,,,,,,,,,,,,,True
+tea consumption,,,,,,,,,,,,,,,,True
+television viewing time,,,,,,,,,,,,,,,,True
+tissue,,,,,,,,,,,,,True,,,
+tooth mobility,,,,,,,,,,,,,,,,True
+total cholesterol,,,,,,,,,,,,,,,,True
+total thiol levels (TTL) in plasma,,,,,,,,,,,,,,,,True
+treated with assisted reproductive technology,,,,,,,,True,,,,,,,,True
+twin birth,,,,,,,,,,,,,,,,True
+type 1 diabetes (T1D),,,,,,,,,,,,,,,,True
+type 1 diabetes with develop diabetic kidney disease,,True,,,,,,,,,,,,,,
+type 2 diabetes (T2D),,True,,,,,,,,,,True,,,,True
+urinary Arsenic,,True,,,,,,,,,,,,,,
+vegan,,True,,,,,,,,,,,,,,
+vitamin B12 supplement,,,,,,,,,,,,,,,,True
+waist circumference (WC),,True,,,,,,,,,,,,,,True
+weight loss,,True,,,,,,,,,,True,,,,
+wellbeing,,,,,,,,,,,,,,,,True
+wheeze,,,,,,,,,,,,,,,,True
