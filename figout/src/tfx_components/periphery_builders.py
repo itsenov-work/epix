@@ -1,6 +1,6 @@
 from utils.augmentations import RandAugment, AutoAugment
 import tensorflow as tf
-import logging
+from utils import logging
 
 
 def _build_optimizer(learning_rate,

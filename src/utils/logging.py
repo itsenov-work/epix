@@ -1,9 +1,8 @@
-import logging
 import sys
 import os
 from contextlib import contextmanager
 from typing import List
-
+import logging
 from tqdm import tqdm
 
 log_folder = "logs"

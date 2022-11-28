@@ -1,7 +1,7 @@
 import pandas as pd
 import os.path as osp
 
-from utils.logger import LoggerMixin
+from utils.logging import LoggerMixin
 
 
 #

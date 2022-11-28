@@ -8,7 +8,7 @@ import json
 from strenum import StrEnum
 import urllib.parse
 
-from logging import LoggerMixin
+from utils.logging import LoggerMixin
 
 
 class BrowseEndpoints(StrEnum):
@@ -179,4 +179,9 @@ def get_all_blood_traits():
 
 
 if __name__ == '__main__':
-    get_all_blood_traits()
+    filters, results = EWASDatabaseBrowser().iterate_browse(endpoint=BrowseEndpoints.GENE, filters_list=[
+        {BrowseFilters.TRAIT: 'type 2 diabetes (T2D)'},
+        {BrowseFilters.TRAIT: 'gestational diabetes mellitus'}
+    ])
+    for i in range(len(filters)):
+        print(filters[i], results[i])

@@ -1,4 +1,4 @@
-import logging
+from utils import logging
 import sys
 import os
 
