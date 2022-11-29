@@ -20,38 +20,42 @@ from tqdm import tqdm
 import xgboost as xgb
 from boruta import BorutaPy
 
-DATA_PATH = r"F:\data\epigenetics v2\ewasdatahub"
+# DATA_PATH = r"C:\projects\epigenetics\data\raw"
+DATA_PATH = r"D:\work\epix\ewas datahub data"
+
+class Factor(Enum):
+    pass
 
 
 class Diseases(Enum):
     # Alzheimers = "Alzheimer's disease"
     # Asthma = "asthma"
-    AutismSpectrum = 'autism spectrum disorder'
-    ChildhoodAsthma = 'childhood asthma'
-    Crohns = "Crohn's disease"
-    Down = 'Down syndrome'
-    Graves = "Graves' disease"
-    Huntingtons = "Huntington's disease"
-    CognitalAnomalies = 'intellectual disability and congenital anomalies'
-    Kabuki = 'Kabuki syndrome'
-    MS = 'multiple sclerosis'
-    NephrogenicRest = 'nephrogenic rest'
-    Panic = 'panic disorder'
-    Parkinsons = "Parkinson's disease"
-    Preeclampsia = 'preeclampsia'
-    Psoriasis = 'psoriasis'
-    RaspiratoryAllergy = 'respiratory allergy'
-    RheumatoidArthritis = 'rheumatoid arthritis'
-    Schizophrenia = 'schizophrenia'
-    SilverRussel = 'Silver Russell syndrome'
-    Sjorgens = "Sjogren's syndrome"
-    Spina = 'spina bifida'
-    Stroke = 'stroke'
-    InsulinResist = 'systemic insulin resistance'
-    Lupus = 'systemic lupus erythematosus'
-    Sclerosis = 'systemic sclerosis'
+    # AutismSpectrum = 'autism spectrum disorder'
+    # ChildhoodAsthma = 'childhood asthma'
+    # Crohns = "Crohn's disease"
+    # Down = 'Down syndrome'
+    # Graves = "Graves' disease"
+    # Huntingtons = "Huntington's disease"
+    # CognitalAnomalies = 'intellectual disability and congenital anomalies'
+    # Kabuki = 'Kabuki syndrome'
+    # MS = 'multiple sclerosis'
+    # NephrogenicRest = 'nephrogenic rest'
+    # Panic = 'panic disorder'
+    # Parkinsons = "Parkinson's disease"
+    # Preeclampsia = 'preeclampsia'
+    # Psoriasis = 'psoriasis'
+    # RaspiratoryAllergy = 'respiratory allergy'
+    # RheumatoidArthritis = 'rheumatoid arthritis'
+    # Schizophrenia = 'schizophrenia'
+    # SilverRussel = 'Silver Russell syndrome'
+    # Sjorgens = "Sjogren's syndrome"
+    # Spina = 'spina bifida'
+    # Stroke = 'stroke'
+    # InsulinResist = 'systemic insulin resistance'
+    # Lupus = 'systemic lupus erythematosus'
+    # Sclerosis = 'systemic sclerosis'
     T2D = 'type 2 diabetes'
-    UlcerativeColitis = 'Ulcerative colitis'
+    # UlcerativeColitis = 'Ulcerative colitis'
 
 
 class Conditions(Enum):
@@ -269,7 +273,7 @@ def create_xgb_classifier(disease, save=True):
     """ Select model: """
     model = xgb.XGBClassifier()
     """Perform feature selection: """
-    initial_feature_selector = SelectKBest(f_classif, k=8000)
+    initial_feature_selector = SelectKBest(chi2, k=8000)
     initial_feature_selector.fit(X_train, y_train)
     feature_idx = initial_feature_selector.get_support(indices=True)
     feature_names = X_train.columns[feature_idx]
@@ -438,5 +442,5 @@ def plots_from_info():
 
 
 if __name__ == '__main__':
-    for condition in [Conditions.BMI]:
-        create_xgb_regressor(condition)
+    # for condition in [Conditions.BMI]:
+    main_training_loop()
