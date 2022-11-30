@@ -4,6 +4,7 @@ import csv
 import json
 from ewas.ewas_dh_utils import EWASDataHubDiseases
 from utils.logging import Logger, my_tqdm
+from utils.csv_utils import read_csv_line
 
 logger = Logger('Samplifier')
 
@@ -26,8 +27,6 @@ def clear_folder(folder):
     os.makedirs(folder, exist_ok=True)
 
 
-def read_csv_line(l):
-    return l.strip('\n').split(',')
 
 
 def save_sample(sample, save_folder):
@@ -126,9 +125,6 @@ def samplify_ewas_datahub_disease(local_path, disease, override=True):
 
 
 if __name__ == '__main__':
-    local_path = r'C:\Users\itsen\workspaces\epix\epigenetic data\diseases'
-    for i, disease in enumerate(EWASDataHubDiseases):
-        if i == 1:
-            break
-        logger.i(f"Samplifying disease {i + 1} out of {len(EWASDataHubDiseases)}")
+    local_path = r'C:\Users\itsen\workspaces\epix\epigenetic data\diseases\Clean Data'
+    for disease in EWASDataHubDiseases:
         samplify_ewas_datahub_disease(local_path=local_path, disease=disease)

@@ -2,7 +2,7 @@ from strenum import StrEnum
 
 
 class EWASDataHubDiseases(StrEnum):
-    Alzheimers = "Alzheimer's disease"
+    # Alzheimers = "Alzheimer's disease"
     # Asthma = "asthma"
     # AutismSpectrum = 'autism spectrum disorder'
     # ChildhoodAsthma = 'childhood asthma'
