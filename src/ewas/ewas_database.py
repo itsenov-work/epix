@@ -8,7 +8,7 @@ import json
 from strenum import StrEnum
 import urllib.parse
 
-from logging import LoggerMixin
+from utils.logging import LoggerMixin
 
 
 class BrowseEndpoints(StrEnum):
@@ -134,7 +134,7 @@ class EWASDatabaseBrowser(LoggerMixin):
 def save_json(folder, filename, obj):
     import os
     import os.path as osp
-    folder_path = osp.join('..', 'resources', folder)
+    folder_path = osp.join('../..', 'resources', folder)
 
     os.makedirs(folder_path, exist_ok=True)
     filepath = osp.join(folder_path, filename + ".json")
@@ -145,7 +145,7 @@ def save_json(folder, filename, obj):
 def get_json(folder, filename):
     import os
     import os.path as osp
-    folder_path = osp.join('..', 'resources', folder)
+    folder_path = osp.join('../..', 'resources', folder)
 
     os.makedirs(folder_path, exist_ok=True)
     filepath = osp.join(folder_path, filename + ".json")
@@ -179,4 +179,9 @@ def get_all_blood_traits():
 
 
 if __name__ == '__main__':
-    get_all_blood_traits()
+    filters, results = EWASDatabaseBrowser().iterate_browse(endpoint=BrowseEndpoints.GENE, filters_list=[
+        {BrowseFilters.TRAIT: 'type 2 diabetes (T2D)'},
+        {BrowseFilters.TRAIT: 'gestational diabetes mellitus'}
+    ])
+    for i in range(len(filters)):
+        print(filters[i], results[i])

@@ -1,9 +1,15 @@
-from utils import logging
+import datetime
 import sys
 import os
+from contextlib import contextmanager
+from typing import List
+import logging
+from tqdm import tqdm
 
 log_folder = "logs"
 loggers = dict()
+silenced_loggers = list()
+non_silenced_loggers = list()
 
 OKAY_LEVEL_NUM = 9
 SUCCESS_LEVEL_NUM = 13
@@ -13,6 +19,16 @@ logging.addLevelName(OKAY_LEVEL_NUM, "OKAY")
 logging.addLevelName(SUCCESS_LEVEL_NUM, "SUCCESS")
 logging.addLevelName(END_LEVEL_NUM, "END")
 logging.addLevelName(START_LEVEL_NUM, "START")
+
+def setup_log_file():
+    main_file = sys.argv[0]
+    main_filename = os.path.basename(main_file)
+    log_file = os.path.join(log_folder, str(datetime.date.today()),
+                            f'{main_filename}_{datetime.datetime.now().strftime("%H_%M_%S")}.log')
+    return log_file
+
+
+log_file = setup_log_file()
 
 
 def okay(self, message, *args, **kwargs):
@@ -56,7 +72,7 @@ class ColoredFormatter(logging.Formatter):
     FORMATS = {
         logging.DEBUG: yellow,
         logging.INFO: grey,
-        logging.WARNING: orange,
+        logging.WARNING: yellow,
         logging.ERROR: red,
         logging.CRITICAL: bold_red,
         OKAY_LEVEL_NUM: cyan,
@@ -75,9 +91,6 @@ class ColoredFormatter(logging.Formatter):
 def setup_custom_logger(name):
     formatter = ColoredFormatter(fmt='%(asctime)s %(name)-20s %(levelname)-8s %(message)s',
                                  datefmt='[%Y-%m-%d %H:%M:%S]')
-    filename = name.lower().replace(" ", "_")
-    log_file = os.path.join(log_folder, "logs" + '.log')
-
     os.makedirs(os.path.dirname(log_file), exist_ok=True)
     handler = logging.FileHandler(log_file, mode='w+')
     handler.setFormatter(formatter)
@@ -90,28 +103,27 @@ def setup_custom_logger(name):
     return logger
 
 
-def reformat_tf_logging():
-    # get TF logger
-    log = logging.getLogger('tensorflow')
-    log.setLevel(logging.DEBUG)
+class SilentFilter(logging.Filter):
+    def filter(self, record: logging.LogRecord) -> bool:
+        return not record.levelno in {logging.DEBUG,
+                                      logging.INFO,
+                                      logging.WARNING,
+                                      OKAY_LEVEL_NUM,
+                                      SUCCESS_LEVEL_NUM,
+                                      START_LEVEL_NUM,
+                                      END_LEVEL_NUM}
 
-    # create formatter and add it to the handlers
-    formatter = ColoredFormatter(fmt='%(asctime)s %(name)-20s %(levelname)-8s %(message)s',
-                                 datefmt='[%Y-%m-%d %H:%M:%S]')
-    screen_handler = logging.StreamHandler(stream=sys.stdout)
-    screen_handler.setLevel(logging.DEBUG)
-    screen_handler.setFormatter(formatter)
-    log.handlers = []
-    log.addHandler(screen_handler)
-    # create file handler which logs even debug messages
-    fh = logging.FileHandler(os.path.join(log_folder, 'tensorflow.log'))
-    fh.setLevel(logging.DEBUG)
-    fh.setFormatter(formatter)
-    log.addHandler(fh)
 
 class Logger:
     def __init__(self, name):
         self._logger = setup_custom_logger(name)
+
+    def silence(self):
+        self._logger.addFilter(SilentFilter())
+
+    def error(self, message):
+        self.e(message)
+        raise RuntimeError(message)
 
     def e(self, message):
         self._logger.error(message)
@@ -134,26 +146,59 @@ class Logger:
     def start(self, message):
         self._logger.start(message)
 
-    def end(self):
+    def end(self, message=None):
+        if message is not None:
+            self._logger.end(message)
         self._logger.end("--------------------------------------")
 
 
 class LoggerMixin:
     def __init__(self, *args, **kwargs):
         super(LoggerMixin, self).__init__(*args, **kwargs)
-        if self.__class__.__name__ not in loggers:
-            self.log = Logger(self.__class__.__name__)
-            loggers[self.__class__.__name__] = self.log
+        class_name = self.__class__.__name__
+        if class_name not in loggers:
+            self.log = Logger(class_name)
+            loggers[class_name] = self.log
+            if class_name in silenced_loggers:
+                self.log.silence()
+            if len(non_silenced_loggers) > 0 and class_name not in non_silenced_loggers:
+                self.log.silence()
         else:
-            self.log = loggers[self.__class__.__name__]
+            self.log = loggers[class_name]
 
 
-class LoggerAttachMixin:
-    log = None
+def silence(classes: List[type]):
+    silenced_loggers.extend([cls.__name__ for cls in classes])
 
-    def attach_log(self):
-        if self.__class__.__name__ not in loggers:
-            self.log = Logger(self.__class__.__name__)
-            loggers[self.__class__.__name__] = self.log
-        else:
-            self.log = loggers[self.__class__.__name__]
+
+def silence_all_but(classes: List[type]):
+    non_silenced_loggers.extend([cls.__name__ for cls in classes])
+
+
+tqdm_disabled=False
+
+
+def my_tqdm(arg):
+    return tqdm(arg, file=sys.stdout, colour='green', disable=tqdm_disabled)
+
+
+@contextmanager
+def suppress_stdout():
+    with open(os.devnull, "w") as devnull:
+        old_stdout = sys.stdout
+        sys.stdout = devnull
+        try:
+            yield
+        finally:
+            sys.stdout = old_stdout
+
+
+@contextmanager
+def suppress_stderr():
+    with open(os.devnull, "w") as devnull:
+        old_stderr = sys.stderr
+        sys.stderr = devnull
+        try:
+            yield
+        finally:
+            sys.stderr = old_stderr
