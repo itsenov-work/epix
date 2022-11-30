@@ -134,7 +134,7 @@ class EWASDatabaseBrowser(LoggerMixin):
 def save_json(folder, filename, obj):
     import os
     import os.path as osp
-    folder_path = osp.join('..', 'resources', folder)
+    folder_path = osp.join('../..', 'resources', folder)
 
     os.makedirs(folder_path, exist_ok=True)
     filepath = osp.join(folder_path, filename + ".json")
@@ -145,7 +145,7 @@ def save_json(folder, filename, obj):
 def get_json(folder, filename):
     import os
     import os.path as osp
-    folder_path = osp.join('..', 'resources', folder)
+    folder_path = osp.join('../..', 'resources', folder)
 
     os.makedirs(folder_path, exist_ok=True)
     filepath = osp.join(folder_path, filename + ".json")

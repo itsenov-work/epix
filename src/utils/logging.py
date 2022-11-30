@@ -1,3 +1,4 @@
+import datetime
 import sys
 import os
 from contextlib import contextmanager
@@ -18,6 +19,16 @@ logging.addLevelName(OKAY_LEVEL_NUM, "OKAY")
 logging.addLevelName(SUCCESS_LEVEL_NUM, "SUCCESS")
 logging.addLevelName(END_LEVEL_NUM, "END")
 logging.addLevelName(START_LEVEL_NUM, "START")
+
+def setup_log_file():
+    main_file = sys.argv[0]
+    main_filename = os.path.basename(main_file)
+    log_file = os.path.join(log_folder, str(datetime.date.today()),
+                            f'{main_filename}_{datetime.datetime.now().strftime("%H_%M_%S")}.log')
+    return log_file
+
+
+log_file = setup_log_file()
 
 
 def okay(self, message, *args, **kwargs):
@@ -80,9 +91,6 @@ class ColoredFormatter(logging.Formatter):
 def setup_custom_logger(name):
     formatter = ColoredFormatter(fmt='%(asctime)s %(name)-20s %(levelname)-8s %(message)s',
                                  datefmt='[%Y-%m-%d %H:%M:%S]')
-    filename = name.lower().replace(" ", "_")
-    log_file = os.path.join(log_folder, "logs" + '.log')
-
     os.makedirs(os.path.dirname(log_file), exist_ok=True)
     handler = logging.FileHandler(log_file, mode='w+')
     handler.setFormatter(formatter)
