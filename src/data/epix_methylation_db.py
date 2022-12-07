@@ -83,16 +83,16 @@ class EPIXMethylationDatabase:
         """
         return self._do_get_common_cpg(sample_ids)
 
-    def search(self, key_values: dict):
+    def search(self, key_values: dict, sample_ids=None):
         """
         Filter samples based on key - value pair criteria.
 
         :param key_values: A dictionary of filter criteria
+        :param sample_ids: (optional) if you want to search specific samples, pass list of sample_ids
 
-        :return:
+        :return: List of sample ids (sorted alphabetically) that fulfill the criteria
         """
-        return self._do_search(key_values)
-
+        return self._do_search(key_values, sample_ids)
 
     @staticmethod
     def pick_random_samples(sample_ids, n, seed=7):
@@ -101,28 +101,24 @@ class EPIXMethylationDatabase:
         return random.sample(sample_ids, n)
 
     def get_data(self, config):
-        all_sample_ids = []
-        for request in my_tqdm(config):
-            key_values = request['filters']
-            sample_ids = self.search(key_values)
-            if 'n' in request:
-                n = request['n']
-                if 'random' in request and request['random']:
-                    if 'seed' in request:
-                        sample_ids = self.pick_random_samples(sample_ids, n, request['seed'])
-                    else:
-                        sample_ids = self.pick_random_samples(sample_ids, n)
-                else:
-                    sample_ids = sample_ids[:n]
-            all_sample_ids.extend(sample_ids)
+        """
+        The ultimate getter function for this class.
+        :param: config: The search configuration. The config is a list of requests.
+                        Each request looks like the following:
 
-        logger.i(f"Total samples: {len(all_sample_ids)}")
-        common_cpgs = self.get_common_cpg(sample_ids=all_sample_ids)
-        samples = self.get_samples(sample_ids=all_sample_ids, cpgs=common_cpgs)
-        metadata_ret = [{**self.get_sample_metadata(sample_id), 'sample_id': sample_id} for sample_id in all_sample_ids]
+        {
+            filters: { 'disease': 'type 2 diabetes', 'tissue': 'whole blood' } - a dict of search requirements
+            samples: ['GSM3428914', 'GSM3035469'] -> (optional) if you want to look for specific samples
+            n: 35 -> (optional) number of samples to return for that criteria
+            random: True/False -> (optional) if you want to randomize which samples are returned.
+                                  Otherwise they will be selected alphabetically
+            seed: 7 -> (optional) if you want to give a specific seed for randomization. Defaults to 7
+        }
 
-        df = pd.DataFrame(samples, columns=['sample_id'] + common_cpgs)
-        return df, metadata_ret
+        :return: 2 objects - a list of lists ['sample_id', 'cpg1', 'cpg2', ...]
+                             and a list of metadata given in the same order { disease: diabetes, case: control ...}
+        """
+        return self._do_get_data(config)
 
     ###############################################################################
     #                             PRIVATE METHODS                                 #
@@ -175,6 +171,7 @@ class EPIXMethylationDatabase:
 
         logger.i(f"Parsing sample {sample_id}...")
         sample = self._read_sample_csv(sample_id)
+        sample = sample[1:]
         sample_cpgs = self.get_sample_cpgs(sample_id)
 
         index_dict = {k: i for i, k in enumerate(sample_cpgs)}
@@ -213,18 +210,59 @@ class EPIXMethylationDatabase:
         logger.s(f"Successfully got all {len(common_cpg)} common cpgs for {len(sample_ids)} samples.")
         return sorted(list(common_cpg))
 
-    def _do_search(self, key_values: dict):
+    def _do_search(self, key_values: dict, sample_ids=None):
+
+        if sample_ids is None:
+            sample_ids = sorted(list(self.metadata.keys()))
+        logger.i(f"Searching for {len(key_values.keys())} criteria from {len(sample_ids)} samples...")
+
+        sample_ids_in_metadata = sorted(list(set(sample_ids).intersection(self.metadata.keys())))
+        if len(sample_ids_in_metadata) < len(sample_ids):
+            logger.w(f"{len(sample_ids) - len(sample_ids_in_metadata)} sample ids were not found in the metadata. "
+                     f"Expected: {len(sample_ids)}, got: {len(sample_ids_in_metadata)}")
+
+        sample_ids = sample_ids_in_metadata
+
         def key_value_correct(key, value, sample):
             return key in sample and sample[key] == value
 
-        samples = [k for k in self.metadata if
+        samples = [k for k in sample_ids if
                    all([key_value_correct(key, key_values[key], self.metadata[k]) for key in key_values])]
-        logger.i(f"Found {len(samples)} fulfilling criteria {key_values}")
+        logger.ok(f"Found {len(samples)} fulfilling criteria {key_values}")
         return sorted(samples)
+
+    def _do_get_data(self, config):
+        all_sample_ids = []
+        for request in my_tqdm(config):
+            key_values = request['filters']
+
+            search_samples = request['samples'] if 'samples' in request else None
+            sample_ids = self.search(key_values, search_samples)
+
+            if 'n' in request:
+                n = request['n']
+                if 'random' in request and request['random']:
+                    sample_ids = self.pick_random_samples(sample_ids, n, request['seed']) if 'seed' in request \
+                        else self.pick_random_samples(sample_ids, n)
+                else:
+                    sample_ids = sample_ids[:n]
+            all_sample_ids.extend(sample_ids)
+
+        logger.i(f"Total samples: {len(all_sample_ids)}")
+
+        common_cpgs = self.get_common_cpg(sample_ids=all_sample_ids)
+        samples = self.get_samples(sample_ids=all_sample_ids, cpgs=common_cpgs)
+        metadata_ret = [{**self.get_sample_metadata(sample_id), 'sample_id': sample_id} for sample_id in all_sample_ids]
+        for i, s in enumerate(samples):
+            for j, k in enumerate(s[1:]):
+                if k.startswith('GSM'):
+                    print(i, j)
+        df = pd.DataFrame(samples, columns=['sample_id'] + common_cpgs)
+        return df, metadata_ret
 
 
 if __name__ == '__main__':
-    local_path = r'C:\Users\itsen\workspaces\epix\epigenetic data\diseases\Samplified Diseases'
+    local_path = r'C:\Users\itsen\workspaces\epix\epigenetic data\diseases\Clean Data\Samplified Diseases Clean'
 
     config = [
         {
