@@ -96,10 +96,9 @@ class ModelTrainer(LoggerMixin):
     def test(self):
         return self.testing_data["y"], self.model.predict(self.testing_data["x"])
 
-    def get_confusion_matrix(self, ax):
-        cmd = ConfusionMatrixDisplay(confusion_matrix(self.testing_data["y"],
-                                                      self.model.predict(self.testing_data["x"])))
-        cmd.plot(ax=ax)
+    def get_confusion_matrix(self):
+        return confusion_matrix(self.testing_data["y"],
+                                self.model.predict(self.testing_data["x"]))
 
     def get_metrics_report(self):
         return classification_report(self.testing_data["y"], self.model.predict(self.testing_data["x"]),

@@ -3,6 +3,7 @@ import os
 from datetime import datetime
 
 import setuptools.glob
+from sklearn.metrics import ConfusionMatrixDisplay, confusion_matrix
 from strenum import StrEnum
 
 import numpy as np
@@ -196,7 +197,7 @@ class Experimentalist(PathControl):
         logger.end("Feature selection finished!")
         logger.start("Model training beginning...")
         self.model_trainer.train()
-        self.model_trainer.save_model(os.path.join(self.get_model_path(), "xgb.json"))
+        self.model_trainer.save_model(os.path.join(self.get_model_path(), "saved_model.json"))
         self.produce_classification_stats()
         logger.s("Model saved!")
         logger.end()
@@ -223,11 +224,16 @@ class Experimentalist(PathControl):
             plt.close()
             logger.s("Produced chart for {}".format(key))
 
-    def produce_classification_stats(self, save=True):
+    def produce_classification_stats(self):
         confusion_fig, confusion_ax = plt.subplots()
         features_fig, features_ax = plt.subplots()
-        xgb.plot_importance(self.model_trainer.get_model(), ax=features_ax, max_num_features=20)
+        xgb.plot_importance(self.model_trainer.get_model(), ax=features_ax, max_num_features=5)
         features_fig.savefig(os.path.join(self.get_model_path(), "feature_importance.png"))
+        d = ConfusionMatrixDisplay(self.model_trainer.get_confusion_matrix())
+        d.plot(ax=confusion_ax)
+        confusion_fig.savefig(os.path.join(self.get_model_path(), "confusion_matrix.png"))
+        with open(os.path.join(self.get_model_path(), "performance_report.json"), "w") as report:
+            json.dump(self.model_trainer.get_metrics_report(), report, indent=4)
 
 
 if __name__ == '__main__':
