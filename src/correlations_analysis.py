@@ -15,11 +15,22 @@ def calculate_intersection_graph(sorted_cpg, diabetes_cpg):
     intersection_diff_from_random = [intersection / (expected_per_1000 * (i+0.01)) for i, intersection in enumerate(intersections)]
     import matplotlib.pyplot as plt
     plt.plot(intersection_diff_from_random)
+    plt.savefig(f'../resources/plot_{filename_diabetes}_{filename_classif}.jpg')
     plt.show()
+    plt.close()
+
+
+def read_diabetes_cpgs(filename):
+    with open(f'../resources/{filename}.tsv', 'r') as f:
+        cpgs = [line.split('\t')[1] for line in f.readlines()[1:]]
+    return cpgs
 
 
 if __name__ == '__main__':
-    with open('../resources/diabetes_fclassif.csv') as f:
+
+    filename_diabetes = 'COMMON_CPG_OVERLAP_DIABETES'
+    filename_classif = 'diabetes_chi2'
+    with open(f'../resources/{filename_classif}.csv') as f:
         cpgs = f.readline().strip('\n').split(',')[1:]
         correlations = f.readline().strip('\n').split(',')[1:]
 
@@ -27,16 +38,20 @@ if __name__ == '__main__':
     print(len(correlations))
     zipped = zip(cpgs, correlations)
     zipped = sorted(zipped, key=lambda x: float(x[1]), reverse=True)
-    with open('../resources/diabetes_cpg_list.csv') as f:
-        diabetes_lines = f.readlines()[1:]
 
-    diabetes_lines = set([l.split(',')[0] for l in diabetes_lines])
-    diabetes_lines = diabetes_lines.intersection(set(cpgs))
-    print(f'Diabetes lines: {len(diabetes_lines)}')
-    print(f'Diabetes lines by correlation:')
+    sorted_cpgs = [c[0] for c in zipped]
+
+    diabetes_cpgs = read_diabetes_cpgs(filename_diabetes)
+    diabetes_cpgs = list(
+        set(diabetes_cpgs).intersection(set(cpgs))
+    )
+
     cpg_to_correlation = dict(zipped)
-    diabetes_correlations = [(cpg, cpg_to_correlation[cpg]) for cpg in diabetes_lines]
+    diabetes_correlations = [(cpg, cpg_to_correlation[cpg]) for cpg in diabetes_cpgs]
     diabetes_correlations = sorted(diabetes_correlations, key=lambda x: float(x[1]), reverse=True)
+
+    calculate_intersection_graph(sorted_cpgs, diabetes_cpgs)
+
     print(len(diabetes_correlations))
     print(diabetes_correlations)
     json_correlations = []
@@ -45,4 +60,4 @@ if __name__ == '__main__':
             'cpg': x[0],
             'correlation_to_diabetes': float(x[1])
         })
-    save_json('statistics', 'momchil_diabetes_correlations', json_correlations)
+    save_json('statistics', f'stats_{filename_diabetes}_{filename_classif}', json_correlations)
