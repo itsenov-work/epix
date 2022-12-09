@@ -98,6 +98,9 @@ class EPIXMethylationDatabase:
     def pick_random_samples(sample_ids, n, seed=7):
         import random
         random.seed(seed)
+        if n > len(sample_ids):
+            logger.w("Reduced n from {} to {} to fit data quantity.".format(n, len(sample_ids)))
+            n = len(sample_ids)
         return random.sample(sample_ids, n)
 
     def get_data(self, config):
@@ -258,7 +261,7 @@ class EPIXMethylationDatabase:
             common_cpgs = sorted(list(set(common_cpgs).intersection(set(config_cpgs))))
 
         samples = self.get_samples(sample_ids=all_sample_ids, cpgs=common_cpgs)
-        metadata_ret = [{**self.get_sample_metadata(sample_id), 'sample_id': sample_id} for sample_id in all_sample_ids]
+        metadata_ret = {sample_id: {**self.get_sample_metadata(sample_id)} for sample_id in all_sample_ids}
         for i, s in enumerate(samples):
             for j, k in enumerate(s[1:]):
                 if k.startswith('GSM'):
