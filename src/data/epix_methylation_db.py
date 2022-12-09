@@ -233,6 +233,9 @@ class EPIXMethylationDatabase:
 
     def _do_get_data(self, config):
         all_sample_ids = []
+        config_cpgs = config['cpgs'] if 'cpgs' in config else None
+
+        config = config['requests']
         for request in my_tqdm(config):
             key_values = request['filters']
 
@@ -251,6 +254,9 @@ class EPIXMethylationDatabase:
         logger.i(f"Total samples: {len(all_sample_ids)}")
 
         common_cpgs = self.get_common_cpg(sample_ids=all_sample_ids)
+        if config_cpgs is not None:
+            common_cpgs = sorted(list(set(common_cpgs).intersection(set(config_cpgs))))
+
         samples = self.get_samples(sample_ids=all_sample_ids, cpgs=common_cpgs)
         metadata_ret = [{**self.get_sample_metadata(sample_id), 'sample_id': sample_id} for sample_id in all_sample_ids]
         for i, s in enumerate(samples):
@@ -264,32 +270,35 @@ class EPIXMethylationDatabase:
 if __name__ == '__main__':
     local_path = r'C:\Users\itsen\workspaces\epix\epigenetic data\diseases\Clean Data\Samplified Diseases Clean'
 
-    config = [
-        {
-            "filters": {
-                "disease": "type 2 diabetes",
-                "tissue": "whole blood",
-                "sample_type": "case"
+    config = {
+        "cpgs": ["cg00050873", "cg00212031", 'cg00213748', 'cg0214611', 'cg00455876'],
+        "requests": [
+            {
+                "filters": {
+                    "disease": "type 2 diabetes",
+                    "tissue": "whole blood",
+                    "sample_type": "case"
+                },
             },
-        },
-        {
-            "filters": {
-                "disease": "schizophrenia",
-                "tissue": "whole blood",
-                "sample_type": "case"
+            {
+                "filters": {
+                    "disease": "schizophrenia",
+                    "tissue": "whole blood",
+                    "sample_type": "case"
+                },
+                "n": 10,
+                "random": True,
+                "seed": 10
             },
-            "n": 10,
-            "random": True,
-            "seed": 10
-        },
-        {
-            "filters": {
-                "disease": "type 2 diabetes",
-                "tissue": "whole blood",
-                "sample_type": "control"
+            {
+                "filters": {
+                    "disease": "type 2 diabetes",
+                    "tissue": "whole blood",
+                    "sample_type": "control"
+                },
+                "n": 40,
+                "random": False,
             },
-            "n": 40,
-            "random": False,
-        },
-    ]
+        ],
+    }
     EPIXMethylationDatabase(local_directory=local_path).get_data(config)
