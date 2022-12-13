@@ -294,7 +294,7 @@ GROUP BY  va.variantNID
 -- ============================================================
 
 -- select all diabetes related CpG in promotor range of -1000bp +500bp
--- this 1500bp region covers most if not all CpG overlaping with 
+-- this 1500bp region covers most if not all CpG overlapping with 
 -- the promotor region and regulate the transcription
 -- the query is 2in1 with UNION ALL as it covers + and - DNA strand
 SELECT  ga.geneName
@@ -367,7 +367,7 @@ AND ga.geneName IN (
   GROUP BY  ga.geneName
 )
 
--- select all diabetes related CpG overlaping with the gene
+-- select all diabetes related CpG overlapping with the gene
 -- covering both UTRs, all exons and introns
 SELECT  ga.geneName
        ,c.Name
